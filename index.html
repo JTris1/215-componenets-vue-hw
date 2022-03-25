@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool Submissions and Components</title>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="form">
+        <input v-model="name" type="text" placeholder="Name"/>
+        <input v-model="email" type="text" placeholder="Email"/>
+        <div>{{message}}</div>
+        <!-- <codenames
+            v-for="i in codenames"
+            v-bind:name="i.name"
+            v-bind:codename="1.codename"
+        ></codenames> -->
+        <div v-for="i in codenames">
+            <codenames v-bind:name="i.name" v-bind:codename="i.codename"></codenames>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
